@@ -1,0 +1,54 @@
+Pedro Gomes de ALmeida 25082
+Jennifer Nayara Mendonça 25034
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Filmes</title>
+    <link rel="stylesheet" href="filme.css">
+    <script src="filme.js"></script>
+
+</head>
+<body>
+    <div class="container">
+    <form>
+        <div>
+            <label for="Title">Digite o nome do filme: </label>
+            <input type="text" id="Title" placeholder="Digite o nome do filme">
+        </div>
+        <div>
+            <label for="Year">Ano de lançamento: </label>
+            <input readonly type="text" id="Year">
+        </div>
+        <div>
+            <label for="Released">Lançado: </label>
+            <input readonly type="text" id="Released">
+        </div>
+        <div>
+            <label for="Rated">Classificação: </label>
+            <input readonly type="text" id="Rated">
+        </div>
+        <div>
+            <label for="Runtime">Tempo de execução: </label>
+            <input readonly type="text" id="Runtime">
+        </div>
+        <div>
+            <label for="Genre">Gênero: </label>
+            <input readonly type="text" id="Genre">
+        </div>
+        <div>
+            <label for="Director">Diretor: </label>
+            <input readonly type="text" id="Director">
+        </div>
+        <div>
+            <label for="Poster">Poster: </label>
+            <input readonly type="text" id="Poster">
+        </div>
+        <div>
+            <button type="button" onclick="buscaFilme()">Buscar</button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

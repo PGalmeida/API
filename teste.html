@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de incorporação de imagem da API</title>
+</head>
+<body>
+    <div id="imagem-container">
+        <!-- A imagem da API será incorporada aqui -->
+    </div>
+
+    <script>
+        // Suponha que você está usando uma API para obter a URL da imagem
+        // Substitua a URL_DA_API pelo endpoint da API que fornece a URL da imagem
+        const apiUrl = "https://www.omdbapi.com/?apikey=404f9c5a&t=batman";
+
+        // Realize uma solicitação à API (por exemplo, usando fetch)
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                // Obtém a URL da imagem da resposta da API
+                const imageUrl = data.url;
+
+                // Cria uma tag <img> e define o atributo src com a URL da imagem
+                const imgElement = document.createElement("img");
+                imgElement.src = imageUrl;
+
+                // Adiciona a imagem ao contêiner desejado no seu HTML
+                const imagemContainer = document.getElementById("imagem-container");
+                imagemContainer.appendChild(imgElement);
+            })
+            .catch(error => {
+                console.error("Ocorreu um erro ao buscar a imagem da API:", error);
+            });
+    </script>
+</body>
+</html>
